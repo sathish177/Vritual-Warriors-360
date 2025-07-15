@@ -1,0 +1,3 @@
+name: AutoDockAgent
+description: Agent that automates GitHub repo analysis and Docker setup.
+entry_point: agent.py

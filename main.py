@@ -1,14 +1,9 @@
-from agent import agent
-from envs import init_env
 
-init_env()
-print("✅ AutoDockAgent is running. Type your command below:\n")
+from agent import agent
 
 while True:
-    try:
-        user_input = input("AutoDockAgent > ")
-        response = agent.run(user_input)
-        print(response)
-    except KeyboardInterrupt:
-        print("\n👋 Exiting AutoDockAgent.")
+    user_input = input("\nAutoDockAgent > ")
+    if user_input.lower() in ["exit", "quit"]:
         break
+    response = agent.run(user_input)  # ✅ Correct method
+    print(response.output)
